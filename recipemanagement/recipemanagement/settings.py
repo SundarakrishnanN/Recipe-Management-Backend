@@ -25,7 +25,13 @@ SECRET_KEY = "django-insecure-2=zwcdve=_80s+yb_mfa&!^fir#_#5=6gtyaa1vwa-_nrjpg#d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'recipe-management-backend-me5q.onrender.com',
+    'localhost',
+    '127.0.0.1',
+    # Add any other domains you want to allow
+]
+
 
 
 # Application definition
