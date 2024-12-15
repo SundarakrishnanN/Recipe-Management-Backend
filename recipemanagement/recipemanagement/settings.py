@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'recipe-management-backend-me5q.onrender.com',
     'localhost',
     '127.0.0.1',
+    'https://recipe-master1.vercel.app/'
     # Add any other domains you want to allow
 ]
 
@@ -73,7 +74,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "recipemanagement.urls"
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Next.js development server
+    "http://localhost:3000",  
+    'https://recipe-master1.vercel.app',
 
 ]
 # settings.py
