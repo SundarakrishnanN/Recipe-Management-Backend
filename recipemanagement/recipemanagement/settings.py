@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+from dotenv import load_dotenv, find_dotenv
+import os
+dotenv_path = find_dotenv()
+load_dotenv(dotenv_path)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -109,12 +112,12 @@ WSGI_APPLICATION = "recipemanagement.wsgi.application"
 
 DATABASES = {
   'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'defaultdb',
-        'USER': 'avnadmin',
-        'PASSWORD': 'AVNS_yEwcWsFDjjCNAbqWL4o',
-        'HOST': 'recipe-master-recipe-master1.f.aivencloud.com',  # e.g., 'localhost' or 'your-database-host.com'
-        'PORT': '10605',       # Default MySQL port
+        'ENGINE': os.getenv('ENGINE'),
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('USER'),
+        'PASSWORD': os.getenv('PASSWORD'),
+        'HOST': os.getenv('HOST'),  # e.g., 'localhost' or 'your-database-host.com'
+        'PORT': os.getenv('PORT'),       # Default MySQL port
     }
 }
 
